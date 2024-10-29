@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="TOP_CENTER" style="-fx-padding:30 0 0 0;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.vehicle.VehicleController">
+    <Label text="StudentID: 230107013  Name: Tabaldiev Aslan" style="-fx-font-weight: bold;" alignment="CENTER"/>
+
+    <Label text="Vehicle Type:"/>
+    <HBox spacing="10" alignment="CENTER">
+
+        <RadioButton fx:id="carRadio" text="Car" toggleGroup="$vehicleTypeGroup"/>
+        <RadioButton fx:id="busRadio" text="Bus" toggleGroup="$vehicleTypeGroup"/>
+        <RadioButton fx:id="truckRadio" text="Truck" toggleGroup="$vehicleTypeGroup"/>
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" style="-fx-padding: 0 20 0 83;"> <!-- Use -fx-padding style for insets -->
+        <Label text="Engine Capacity (CC):" style="-fx-padding: 0 10 0 0;"/> <!-- Additional space between Label and TextField -->
+        <TextField fx:id="engineCapacityField" promptText="Enter engine capacity"/>
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" style="-fx-padding: 0 20 0 100;">
+        <Label text="Manufacture Year:" style="-fx-padding: 0 10 0 0;"/>
+        <TextField fx:id="manufactureYearField" promptText="Enter manufacture year"/>
+    </HBox>
+
+    <Button text="Calculate Tax" onAction="#calculateTax"/>
+
+    <Label fx:id="resultLabel" text="Calculated Tax will be displayed here" style="-fx-font-weight: bold; -fx-font-size: 14;"/>
+</VBox>
